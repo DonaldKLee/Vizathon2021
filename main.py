@@ -7,7 +7,6 @@ Criteria
 - Homelessness, evictions
 
 
-
 Tutorial for extracting .csv data: https://docs.python.org/3/library/csv.html
 """
 import random, os
