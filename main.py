@@ -22,8 +22,6 @@ from pyecharts import *
 import csv
 
 
-
-
 #Sets up the flask app
 app = Flask(
 	__name__,
