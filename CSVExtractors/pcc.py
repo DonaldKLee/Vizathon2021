@@ -11,7 +11,7 @@ brazillisty = []
 korealistx = []
 korealisty = []
 
-with open("csv/face-covering-policies-covid.csv") as file:
+with open("csv/public-campaigns-covid.csv") as file:
     for row in file:
         line = row.split(',') # Converts each line into a list
 
@@ -43,5 +43,4 @@ with open("csv/face-covering-policies-covid.csv") as file:
     linegraph.add_yaxis("United States", usalisty)
     linegraph.add_yaxis("Brazil", brazillisty)
     linegraph.add_yaxis("South Korea", korealisty)
-    linegraph.render("face-covering-policies-covid.html")
-
+    linegraph.render("public-campaigns-covid.html")

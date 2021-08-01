@@ -46,10 +46,9 @@ def index(): # Home page
 def sahc(): # Home page
     return render_template('sahc.html')
 
-@app.route('/fcpc')
-def fcpc(): # Home page
-    return render_template('fcpc.html')
-
+@app.route('/pcc')
+def pcc(): # Home page
+    return render_template('pcc.html')
 
 if __name__ == "__main__":  
 	app.run( 

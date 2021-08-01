@@ -12,30 +12,31 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 </head>
 
 
 <body>
 
-<nav>
-    <ul>
-        <li><a href="/sahc">Stay At Home COVID Graph</a></li>
-        <li><a href="/fcpc">Face Covering Policies COVID</a></li>
-    </ul>
-</nav>
-
-<div id="mapid" style="width: 60vw; height: 60vh;"></div>
-
+<div class="map_container">
+    <div id="mapid" class="map"></div>
+</div>
 
 
 <script>
     // Sets the map view
-	var mymap = L.map('mapid').setView([46.380878, -22.085225], 1.5);
+	var mymap = L.map('mapid').setView([40, -25], 2.5);
     
+    function USAClicked() {
+        alert("USA!!!")
+    }
+
     // United States
     var USA = L.marker([37.0902, -95.7129]).addTo(mymap);
-   USA.bindPopup("<b>USA</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
+    USA.bindPopup("<b>USA</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
+
+    USA.on('click', USAClicked);
+
 
     // Brazil
     var Brazil = L.marker([-14.2350, -51.9253]).addTo(mymap);
@@ -57,6 +58,7 @@
     
 
 </script>
+
 
 </body>
 </html>

@@ -2,15 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Awesome-pyecharts</title>
+    <title>Stay At Home COVID</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
 </head>
 
+<body>
+
+{% include 'header.html' %}
+
+<h1 class="pagetitle">Stay At Home COVID</h1>
+
 {% include 'base.html' %}
 {% block content %}{% endblock %}
 
-<body>
     <div id="aa918cbd709040eb842460eda6fc3be5" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
         var chart_aa918cbd709040eb842460eda6fc3be5 = echarts.init(
@@ -7669,5 +7674,11 @@
 };
         chart_aa918cbd709040eb842460eda6fc3be5.setOption(option_aa918cbd709040eb842460eda6fc3be5);
     </script>
+
+<footer>
+    <p class="hackathon">Vizathon 2021</p>
+    <p class="names">By: Donald Lee, Cathy Ha, Isla Shaw, and Kaitlyn Cui</p>
+</footer>
+
 </body>
 </html>
