@@ -48,15 +48,16 @@ li a:hover {
 .map {
     width: 100%; 
     height: 60vh;
-    border: 3px solid black;
+    border: 2px solid black;
     position: relative;
+    border-radius: 40px;
 }
 
 .chart-container {
     margin-top:10px;
     margin-left: 5%;
     width: 40%;
-    border: 3px solid black;
+    border: 2px solid black;
     padding: 7px;
     position: relative;
     float:left;
@@ -82,6 +83,7 @@ footer {
     font-size: 1em;
     text-align:center;
     color: white;
+    margin-top: -20px;
 }
 
 .about {
