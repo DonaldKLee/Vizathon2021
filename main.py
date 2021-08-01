@@ -2,7 +2,7 @@
 Criteria
 - Challenge 2: 
 - Min 
-- US, Brazil, 
+- US, Brazil, SK 
 - Employment insurance/stimulus checks, vaccine rollouts
 - Homelessness, evictions
 
@@ -11,14 +11,18 @@ Tutorial for extracting .csv data: https://docs.python.org/3/library/csv.html
 """
 import random, os
 from flask import Flask, render_template, url_for, request
-
-
-# Libraries for charts
-from pyecharts.charts import *
-from pyecharts import *
-# Libraries for charts ^^^
-
 import csv
+
+countries = ["US", "Brazil", "South Korea"]
+
+# If the country is in the list countries
+x = "test"
+if x in countries:
+    # Do something
+    pass
+    
+# Face covering
+
 
 
 #Sets up the flask app
@@ -42,6 +46,7 @@ def dated_url_for(endpoint, **values):
     return url_for(endpoint, **values)
 # ^ ^ ^
 
+
 @app.route('/')
 def index(): # Home page
     return render_template('index.html')
@@ -52,4 +57,6 @@ if __name__ == "__main__":
     #Starts the website
 		host='0.0.0.0',  #Sets the host, required for repl to detect the site
 		port=random.randint(2000, 9000)  #Randomly select the port the machine hosts on.
-	)
+    )
+
+

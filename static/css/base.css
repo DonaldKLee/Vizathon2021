@@ -1,3 +1,5 @@
 body {
-    background: "blue";
+    background: lightblue;
 }
+
+#mapid { height: 180px; }
