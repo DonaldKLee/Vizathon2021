@@ -11,19 +11,9 @@ Tutorial for extracting .csv data: https://docs.python.org/3/library/csv.html
 """
 import random, os
 from flask import Flask, render_template, url_for, request
-import csv
 
-countries = ["US", "Brazil", "South Korea"]
-
-# If the country is in the list countries
-x = "test"
-if x in countries:
-    # Do something
-    pass
     
 # Face covering
-
-
 
 #Sets up the flask app
 app = Flask(
