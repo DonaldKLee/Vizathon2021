@@ -12,6 +12,7 @@ Tutorial for extracting .csv data: https://docs.python.org/3/library/csv.html
 import random, os
 from flask import Flask, render_template, url_for, request
 
+
     
 # Face covering
 
@@ -40,6 +41,15 @@ def dated_url_for(endpoint, **values):
 @app.route('/')
 def index(): # Home page
     return render_template('index.html')
+
+@app.route('/sahc')
+def sahc(): # Home page
+    return render_template('sahc.html')
+
+@app.route('/fcpc')
+def fcpc(): # Home page
+    return render_template('fcpc.html')
+
 
 if __name__ == "__main__":  
 	app.run( 

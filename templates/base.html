@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,27 +13,38 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 
-	
 </head>
+
+
 <body>
 
+<nav>
+    <ul>
+        <li><a href="/sahc">Stay At Home COVID Graph</a></li>
+        <li><a href="/fcpc">Face Covering Policies COVID</a></li>
+    </ul>
+</nav>
 
-
-<div id="mapid" style="width: 600px; height: 400px;"></div>
+<div id="mapid" style="width: 60vw; height: 60vh;"></div>
 
 
 
 <script>
     // Sets the map view
-	var mymap = L.map('mapid').setView([46.380878, -22.085225], 1.2);
+	var mymap = L.map('mapid').setView([46.380878, -22.085225], 1.5);
     
-    // Canada
-    var Canada = L.marker([56.1304, -106.3468]).addTo(mymap);
-    Canada.bindPopup("<b>Canada</b><br>I am a popup.").openPopup();
+    // United States
+    var USA = L.marker([37.0902, -95.7129]).addTo(mymap);
+   USA.bindPopup("<b>USA</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
 
     // Brazil
+    var Brazil = L.marker([-14.2350, -51.9253]).addTo(mymap);
+    Brazil.bindPopup("<b>Brazil</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
+
 
     // South Korea
+    var SK = L.marker([35.9078, 127.7669]).addTo(mymap);
+    SK.bindPopup("<b>South Korea</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
 
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
