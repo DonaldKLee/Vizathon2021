@@ -7,7 +7,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -27,26 +27,14 @@
     // Sets the map view
 	var mymap = L.map('mapid').setView([40, -25], 2.5);
     
-    function USAClicked() {
-        alert("USA!!!")
-    }
-
     // United States
     var USA = L.marker([37.0902, -95.7129]).addTo(mymap);
-    USA.bindPopup("<b>USA</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
-
-    USA.on('click', USAClicked);
-
-
+ 
     // Brazil
     var Brazil = L.marker([-14.2350, -51.9253]).addTo(mymap);
-    Brazil.bindPopup("<b>Brazil</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
-
 
     // South Korea
     var SK = L.marker([35.9078, 127.7669]).addTo(mymap);
-    SK.bindPopup("<b>South Korea</b><br>I am a popup.", {closeOnClick: false, autoClose: false}).openPopup();
-
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -54,8 +42,6 @@
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(mymap);
-
-    
 
 </script>
 

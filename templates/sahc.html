@@ -2,19 +2,30 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Stay At Home COVID</title>
+    <title>Stay At Home COVID Data</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
-
+<link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 
 <body>
 
 {% include 'header.html' %}
 
-<h1 class="pagetitle">Stay At Home COVID</h1>
+<h1 class="pagetitle">Stay At Home COVID Data</h1>
 
 {% include 'base.html' %}
 {% block content %}{% endblock %}
+
+<script>
+
+    USA.bindPopup("<b>USA</b><br><b>Current Strictness: Somewhat Relaxed</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    Brazil.bindPopup("<b>Brazil</b><br><b>Current Strictness: Somewhat Strict</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    SK.bindPopup("<b>South Korea</b><br><b>Current Strictness: Somewhat Relaxed</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+</script>
+
 
     <div id="aa918cbd709040eb842460eda6fc3be5" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
@@ -7674,6 +7685,12 @@
 };
         chart_aa918cbd709040eb842460eda6fc3be5.setOption(option_aa918cbd709040eb842460eda6fc3be5);
     </script>
+
+<div class="about">
+    <p class="about_text">The X axis (horizontal) represents the starting year of the pandemic (January 2020) to May 2021;the Y axis (vertical) represents the “strictness” of the staying at home orders which 0 means people were not required to stay home at all (extremely relaxed), 1.5 means neither relaxed nor strict, and 3 means people were required to stay home with few exceptions (most strict). Brazil (black) experienced the strictest stay-at-home orders when the United States (red) and South Korea (light blue) experienced less stricter orders. However, Brazil and the United States demonstrate similar patterns over time, but the United States experienced less restrictions at the peak of its orders.
+</p>
+</div>
+
 
 <footer>
     <p class="hackathon">Vizathon 2021</p>

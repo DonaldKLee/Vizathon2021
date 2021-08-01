@@ -2,19 +2,28 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Public Campaigns COVID</title>
+    <title>Public Campaigns COVID Data</title>
     <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
-
+<link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 <body>
 
 {% include 'header.html' %}
 
-<h1 class="pagetitle">Public Campaigns COVID</h1>
+<h1 class="pagetitle">Public Campaigns COVID Data</h1>
 
 {% include 'base.html' %}
 {% block content %}{% endblock %}
 
+<script>
+
+    USA.bindPopup("<b>USA</b><br><b>Current effort: Most Strict</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    Brazil.bindPopup("<b>Brazil</b><br><b>Current effort: Most Strict</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    SK.bindPopup("<b>South Korea</b><br><b>Current effort: Most Strict</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+</script>
 
     <div id="048d2dfaa2964a2186a96f2a83770a43" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
@@ -7678,6 +7687,10 @@
 };
         chart_048d2dfaa2964a2186a96f2a83770a43.setOption(option_048d2dfaa2964a2186a96f2a83770a43);
     </script>
+
+<div class="about">
+    <p class="about_text">The X axis (horizontal) represents the starting year of the pandemic (January 2020) to May 2021;the Y axis (vertical) represents the “effort” of information included about covid-19, 0 means no effort, 1 means moderate effort, and 2 coordinated effort (most strict). Both South Korea and Brazil started their campaigns at the same time (January 2020) which most likely could be due to the fact that neighbouring countries contracted the virus first, but South Korea and the United States allocated the same level of effort.</p>
+</div>
 
 <footer>
     <p class="hackathon">Vizathon 2021</p>

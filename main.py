@@ -50,6 +50,10 @@ def sahc(): # Home page
 def pcc(): # Home page
     return render_template('pcc.html')
 
+@app.route('/gpt')
+def gpt(): # Home page
+    return render_template('gpt.html')
+
 if __name__ == "__main__":  
 	app.run( 
     debug=True,

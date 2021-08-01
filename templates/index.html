@@ -2,19 +2,33 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Face Covering Policies COVID</title>
+    <title>Face Covering Policies COVID Data</title>
     <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
-
+<link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 
 
 <body>
 {% include 'header.html' %}
 
-<h1 class="pagetitle">Face Covering Policies COVID</h1>
+<h1 class="pagetitle">Face Covering Policies COVID Data</h1>
 
 {% include 'base.html' %}
 {% block content %}{% endblock %}
+
+
+<script>
+
+    USA.bindPopup("<b>USA</b><br><b>Current Strictness: Very Strict</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    Brazil.bindPopup("<b>Brazil</b><br><b>Current Strictness: Most Strict</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    SK.bindPopup("<b>South Korea</b><br><b>Current Strictness: Very Strict</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+</script>
+
+
+
 
     <div id="1ab2fd8950984d329ac775896e736478" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
@@ -7676,6 +7690,11 @@
 
         chart_1ab2fd8950984d329ac775896e736478.setOption(option_1ab2fd8950984d329ac775896e736478);
     </script>
+
+<div class="about">
+    <p class="about_text">The X axis (horizontal) represents the starting year of the pandemic (January 2020) to May 2021; the Y axis (vertical) represents the “strictness” of the mask mandates in which 0 means masks were not required at all (extremely relaxed), 1 means a somewhat relaxed, 2 means neither relaxed nor strict, 3 means somewhat strict, and 4 means masks were required at all times outside homes (extremely strict). The United States (red line) and Brazil (black line) had the highest increase in mandating strictness from March 2020 (when WHO declared COVID-19 a global pandemic) to July 2021 while South Korea (light blue) rose gradually from one level of strictness. Interestingly, the United States and South Korea line graphs follow a similar pattern; this could be attributed to the waves of the pandemic experienced by both countries at similar points in time.</p>
+</div>
+
 
 <footer>
     <p class="hackathon">Vizathon 2021</p>

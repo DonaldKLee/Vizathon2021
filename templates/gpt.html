@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Global Protest Tracker Data</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<h1 class="pagetitle">Global Protest Tracker Data</h1>
+
+{% include 'base.html' %}
+{% block content %}{% endblock %}
+
+<script>
+
+    USA.bindPopup("<b>USA</b><br><b>Number Known of Protests: 4</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    Brazil.bindPopup("<b>Brazil</b><br><b>Number Known of Protests: 2</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+    SK.bindPopup("<b>South Korea</b><br><b>Number Known of Protests: NA</b>", {closeOnClick: false, autoClose: false}).openPopup();
+
+</script>
+
+
+    <div id="1795267b21084413ac32d344930b41d8" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_1795267b21084413ac32d344930b41d8 = echarts.init(
+            document.getElementById('1795267b21084413ac32d344930b41d8'), 'white', {renderer: 'canvas'});
+        var option_1795267b21084413ac32d344930b41d8 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "United States",
+            "legendHoverLink": true,
+            "data": [
+                700,
+                1,
+                0,
+                1,
+                10
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "Brazil",
+            "legendHoverLink": true,
+            "data": [
+                0,
+                0,
+                1,
+                10,
+                0
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "United States",
+                "Brazil"
+            ],
+            "selected": {
+                "United States": true,
+                "Brazil": true
+            }
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                1,
+                90,
+                120,
+                210,
+                450,
+                480
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ]
+};
+        chart_1795267b21084413ac32d344930b41d8.setOption(option_1795267b21084413ac32d344930b41d8);
+    </script>
+
+<div class="about">
+    <p class="about_text">The X axis (horizontal) represents the number of days a known protest has lasted in the years of the covid-19 pandemic from 2020 to 2021; the Y axis represents the number of people (in hundreds) who attended these protests in the years of the covid-19 pandemic from 2020 to 2021. The number of people who attend protests in the United States (red) is greater in one day than several days in comparison to Brazil (black) in which the number of people who attended protests that last several days than one day; this may be attributed to population sizes and political stability over covid-19 restrictions (ex: the United States experienced an administration change and with it, changes in restrictions).</p>
+</div>
+
+<footer>
+    <p class="hackathon">Vizathon 2021</p>
+    <p class="names">By: Donald Lee, Cathy Ha, Isla Shaw, and Kaitlyn Cui</p>
+</footer>
+
+</body>
+</html>
